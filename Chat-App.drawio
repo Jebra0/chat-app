@@ -1,0 +1,59 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="rvBoLJrdK6zKwjZyvUyk">
+    <mxGraphModel dx="803" dy="849" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Khw77QhO0jJO5z45LMWz-5" edge="1" parent="1" source="Khw77QhO0jJO5z45LMWz-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="Khw77QhO0jJO5z45LMWz-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Start" vertex="1">
+          <mxGeometry height="80" width="120" x="1560" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-7" edge="1" parent="1" source="Khw77QhO0jJO5z45LMWz-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="Khw77QhO0jJO5z45LMWz-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Login/Register" vertex="1">
+          <mxGeometry height="60" width="120" x="1390" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-9" edge="1" parent="1" source="Khw77QhO0jJO5z45LMWz-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Khw77QhO0jJO5z45LMWz-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-10" connectable="0" parent="Khw77QhO0jJO5z45LMWz-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="select chat" vertex="1">
+          <mxGeometry relative="1" x="0.1625" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="index page of chats" vertex="1">
+          <mxGeometry height="60" width="120" x="1220" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-12" edge="1" parent="1" source="Khw77QhO0jJO5z45LMWz-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Khw77QhO0jJO5z45LMWz-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="933" y="200" />
+              <mxPoint x="933" y="370" />
+            </Array>
+            <mxPoint x="880" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="chat page&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="985" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-14" edge="1" parent="1" source="Khw77QhO0jJO5z45LMWz-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.033;entryY=0.667;entryDx=0;entryDy=0;entryPerimeter=0;" target="Khw77QhO0jJO5z45LMWz-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1090" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Send Text To chat that all participants can see" vertex="1">
+          <mxGeometry height="60" width="130" x="980" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-15" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="can see the messages in same time&amp;nbsp;&lt;div&gt;without refresh&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="120" x="1215" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-16" edge="1" parent="1" source="Khw77QhO0jJO5z45LMWz-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="Khw77QhO0jJO5z45LMWz-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

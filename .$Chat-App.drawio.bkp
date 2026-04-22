@@ -1,0 +1,36 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="rvBoLJrdK6zKwjZyvUyk">
+    <mxGraphModel dx="803" dy="849" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Khw77QhO0jJO5z45LMWz-5" edge="1" parent="1" source="Khw77QhO0jJO5z45LMWz-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="Khw77QhO0jJO5z45LMWz-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Start" vertex="1">
+          <mxGeometry height="80" width="120" x="1560" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-7" edge="1" parent="1" source="Khw77QhO0jJO5z45LMWz-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="Khw77QhO0jJO5z45LMWz-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Login/Register" vertex="1">
+          <mxGeometry height="60" width="120" x="1390" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-9" edge="1" parent="1" source="Khw77QhO0jJO5z45LMWz-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Khw77QhO0jJO5z45LMWz-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-10" connectable="0" parent="Khw77QhO0jJO5z45LMWz-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="select chat" vertex="1">
+          <mxGeometry relative="1" x="0.1625" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="index page of chats" vertex="1">
+          <mxGeometry height="60" width="120" x="1220" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Khw77QhO0jJO5z45LMWz-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="940" y="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
