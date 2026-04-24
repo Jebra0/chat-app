@@ -2,10 +2,10 @@
 
 namespace App\Livewire;
 
-use App\Models\User;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+use App\Repositories\UserRepository;
+use App\Services\User\AuthService;
 
 class Register extends Component
 {
@@ -14,32 +14,32 @@ class Register extends Component
     public string $email = '';
     public string $password = '';
     public string $password_confirmation = '';
+    protected AuthService $authService;
+
+    /**
+     * Inject the AuthService.
+     */
+    public function boot(AuthService $authService)
+    {
+        $this->authService = $authService;
+    }
 
     /**
      * Handle the registration process.
      */
     public function register()
     {
-        // 1. Validation
-        // We add 'confirmed' to password to make sure it matches password_confirmation
+        // 1. Validation (Stays in the component because it's UI-related)
         $validated = $this->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:8|confirmed',
         ]);
 
-        // 2. Create the User
-        $user = User::create([
-            'name' => $this->name,
-            'email' => $this->email,
-            'password' => Hash::make($this->password),
-        ]);
-
-        // 3. Log the user in
-        Auth::login($user);
-
-        // 4. Redirect to the chat/dashboard
-        return redirect()->intended('/chat');
+        // 2. Use the Service to handle the logic
+        if ($this->authService->registerUser($validated)) {
+            return redirect()->route('chat');
+        }
     }
 
     public function render()

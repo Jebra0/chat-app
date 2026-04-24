@@ -3,7 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-use Illuminate\Support\Facades\Auth;
+use App\Services\User\AuthService;
 
 class Login extends Component
 {
@@ -12,29 +12,31 @@ class Login extends Component
     public string $email = '';
     public string $password = '';
 
+    protected AuthService $authService;
+
+    /**
+     * Inject the AuthService.
+     */
+    public function boot(AuthService $authService)
+    {
+        $this->authService = $authService;
+    }
+
     /**
      * This method handles the login logic.
-     * It is called when you submit the form in the frontend.
      */
     public function authenticate()
     {
         // 1. Validation
-        // This checks if the data is correct before trying to log in.
-        $this->validate([
+        $credentials = $this->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
 
-        // 2. Attempt to log in
-        // Auth::attempt is a standard Laravel way to check credentials.
-        if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
-            // Success! Redirect to the chat page.
-            return redirect()->intended('/chat');
+        // 2. Use the Service to handle the login
+        if ($this->authService->attemptLogin($credentials)) {
+            return redirect()->route('chat');
         }
-
-        // 3. Handle Failure
-        // If it fails, we add an error message to the email field.
-        $this->addError('email', 'These credentials do not match our records.');
     }
 
     /**
