@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Livewire\Login;
-use App\Livewire\Register;
+use App\Livewire\Auth\Login;
+use App\Livewire\Auth\Register;
 
 Route::get('/chat', function () {
     return view('welcome');

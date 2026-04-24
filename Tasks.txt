@@ -1,3 +1,5 @@
-- make service lyer for Authentication 
-- make testing clasess for both front and back 
-- make repoitory pattern for user in auth 
+- try to practice the SOLID on this code 
+- Try To use CI/CD like Docker 
+
+- Design the index page of chats
+- Design the Database 

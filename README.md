@@ -37,7 +37,7 @@ To maintain high code quality and prevent regressions, the application is covere
 * **Focus:** Verifying that validation errors appear and successful actions (like login or sending a message) trigger the correct redirects or events.
 
 ## 🛠️ Technology Stack
-* **Framework:** Laravel 11+
+* **Framework:** Laravel 13+
 * **Frontend:** Laravel Livewire (Reactive UI without leaving PHP/Blade)
 * **Real-time Engine:** Laravel Reverb (WebSocket server)
 * **Broadcasting Client:** Laravel Echo & Pusher-JS
