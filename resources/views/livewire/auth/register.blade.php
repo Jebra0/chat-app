@@ -1,81 +1,177 @@
 <div>
-    <div class="min-h-screen flex items-center justify-center bg-slate-950 p-6">
-        <div class="w-full max-w-md bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl">
-            <!-- Header -->
-            <div class="text-center mb-8">
-                <h1 class="text-3xl font-bold text-white mb-2">Create Account</h1>
-                <p class="text-slate-400">Join our chat community today</p>
+    <style>
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000000;
+            padding: 24px;
+            font-family: 'Inter', sans-serif;
+        }
+        .auth-card {
+            width: 100%;
+            max-width: 400px;
+            background-color: #121212;
+            border: 1px solid #333;
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .auth-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .auth-subtitle {
+            color: #a0a0a0;
+            text-align: center;
+            margin-bottom: 32px;
+            font-size: 14px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #d1d1d1;
+            margin-bottom: 8px;
+        }
+        .form-input {
+            width: 100%;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 12px 16px;
+            color: #ffffff;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            box-sizing: border-box;
+        }
+        .form-input:focus {
+            border-color: #0084FF;
+            box-shadow: 0 0 0 2px rgba(0, 132, 255, 0.2);
+        }
+        .error-text {
+            color: #ff4d4d;
+            font-size: 12px;
+            margin-top: 4px;
+            display: block;
+        }
+        .btn-submit {
+            width: 100%;
+            background-color: #0084FF;
+            color: white;
+            font-weight: 600;
+            padding: 14px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s, transform 0.1s;
+            margin-top: 16px;
+        }
+        .btn-submit:hover {
+            background-color: #0073e6;
+        }
+        .btn-submit:active {
+            transform: scale(0.98);
+        }
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .auth-footer {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 14px;
+            color: #888;
+        }
+        .auth-link {
+            color: #0084FF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .auth-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1 class="auth-title">Create Account</h1>
+                <p class="auth-subtitle">Join our chat community today</p>
             </div>
 
-            <!-- Register Form -->
-            <form wire:submit.prevent="register" class="space-y-5">
-
-                <!-- Name Field -->
-                <div>
-                    <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Full Name</label>
-                    <input type="text" id="name" wire:model="name" placeholder="John Doe"
-                        class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
-                    @error('name') <span class="text-red-500 text-xs mt-1 block">{{ $message }}</span> @enderror
+            <form wire:submit.prevent="register">
+                <div class="form-group">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        wire:model="name" 
+                        placeholder="John Doe"
+                        class="form-input"
+                    >
+                    @error('name') 
+                        <span class="error-text">{{ $message }}</span> 
+                    @enderror
                 </div>
 
-                <!-- Email Field -->
-                <div>
-                    <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
-                    <input type="email" id="email" wire:model="email" placeholder="you@example.com"
-                        class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
-                    @error('email') <span class="text-red-500 text-xs mt-1 block">{{ $message }}</span> @enderror
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        wire:model="email" 
+                        placeholder="you@example.com"
+                        class="form-input"
+                    >
+                    @error('email') 
+                        <span class="error-text">{{ $message }}</span> 
+                    @enderror
                 </div>
 
-                <!-- Password Field -->
-                <div>
-                    <label for="password" class="block text-sm font-medium text-slate-300 mb-2">Password</label>
-                    <input type="password" id="password" wire:model="password" placeholder="••••••••"
-                        class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
-                    @error('password') <span class="text-red-500 text-xs mt-1 block">{{ $message }}</span> @enderror
-                </div>
-
-                <!-- Confirm Password Field -->
-                <div>
-                    <label for="password_confirmation" class="block text-sm font-medium text-slate-300 mb-2">Confirm
-                        Password</label>
-                    <input type="password" id="password_confirmation" wire:model="password_confirmation"
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        wire:model="password" 
                         placeholder="••••••••"
-                        class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                        class="form-input"
+                    >
+                    @error('password') 
+                        <span class="error-text">{{ $message }}</span> 
+                    @enderror
                 </div>
 
-                <!-- Submit Button -->
-                <button type="submit" wire:loading.attr="disabled"
-                    class="w-full bg-blue-600 hover:bg-blue-500 disabled:opacity-70 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl shadow-lg shadow-blue-900/20 transition-all flex items-center justify-center gap-2 group mt-4">
-                    <!-- Normal State -->
-                    <span wire:loading.remove wire:target="register" class="flex items-center gap-2">
-                        Create Account
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                        </svg>
-                    </span>
+                <div class="form-group">
+                    <label for="password_confirmation" class="form-label">Confirm Password</label>
+                    <input 
+                        type="password" 
+                        id="password_confirmation" 
+                        wire:model="password_confirmation" 
+                        placeholder="••••••••"
+                        class="form-input"
+                    >
+                </div>
 
-                    <!-- Loading State -->
-                    <span wire:loading wire:target="register">
-                        <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24">
-                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
-                            </circle>
-                            <path class="opacity-75" fill="currentColor"
-                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
-                            </path>
-                        </svg>
-                    </span>
+                <button type="submit" class="btn-submit" wire:loading.attr="disabled">
+                    <span wire:loading.remove wire:target="register">Create Account</span>
+                    <span wire:loading wire:target="register">Processing...</span>
                 </button>
             </form>
 
-            <!-- Footer -->
-            <p class="text-center text-slate-500 text-sm mt-8">
-                Already have an account?
-                <a href="{{route('login')}}" class="text-blue-400 hover:text-blue-300 font-medium" wire:navigate>Log
-                    in</a>
+            <p class="auth-footer">
+                Already have an account? 
+                <a href="{{ route('login') }}" class="auth-link" wire:navigate>Log in</a>
             </p>
         </div>
     </div>

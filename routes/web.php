@@ -5,7 +5,7 @@ use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Register;
 
 Route::get('/chat', function () {
-    return view('welcome');
+    return view('chat');
 })->name('chat');
 
 Route::get('/login', Login::class)->name('login');

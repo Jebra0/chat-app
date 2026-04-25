@@ -1,5 +1,5 @@
-- try to practice the SOLID on this code 
-- Try To use CI/CD like Docker 
 
-- Design the index page of chats
+- Try To use CI/CD like Docker 
+   -> Nginx crash course
+
 - Design the Database 
