@@ -1,5 +1,0 @@
-
-- Try To use CI/CD like Docker 
-   -> Nginx crash course
-
-- Design the Database 
